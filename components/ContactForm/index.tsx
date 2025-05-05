@@ -1,43 +1,47 @@
+import React, { useState } from 'react'
 import styles from './ContactForm.module.css'
 
 const ContactForm =()=> {
+
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+
  return (
-    <div>
-            <label htmlFor="single-line-input">Single Line Input:</label>
+    <div className={styles.contactUsRoot}>
+        <div className={styles.contactUsContainer}>
+            <label className={styles.contactUsInputLabel} htmlFor="single-line-input">Name*</label>
             <input
                 type="text"
                 id="single-line-input"
                 name="single-line-input"
-                placeholder="Enter text"
-                style={{
-                width: '100%',
-                padding: '8px',
-                marginBottom: '16px',
-                border: '1px solid #ccc',
-                borderRadius: '4px',
-                }}
+                placeholder="How do you want us to call you?"
+                className={styles.contactUsInput}
             />
             
+            <label className={styles.contactUsInputLabel} htmlFor="single-line-input">Email*</label>
+            <input
+                type="text"
+                id="single-line-input"
+                name="single-line-input"
+                placeholder="Enter your email where we can send our replies."
+                className={styles.contactUsInput}
+            />
+
             {/* Rich text field */}
-            <label htmlFor="rich-text-input">Rich Text Input:</label>
+            <label className={styles.contactUsInputLabel} htmlFor="rich-text-input">Message*</label>
             <textarea
                 id="rich-text-input"
                 name="rich-text-input"
-                placeholder="Enter rich text"
+                placeholder="Tell us you concerns or inquiries."
                 rows={5}
-                style={{
-                width: '100%',
-                padding: '8px',
-                marginBottom: '16px',
-                border: '1px solid #ccc',
-                borderRadius: '4px',
-                fontFamily: 'Arial, sans-serif',
-                }}
+                className={styles.contactUsInput}
             />
       
-            <button type="submit" style={{ padding: '10px 15px', borderRadius: '5px' }}>
+            <button className={styles.contactUsSubmitButton} type="submit" style={{ padding: '10px 15px', borderRadius: '5px' }}>
                 Submit
             </button>
+        </div>
     </div>
  )
 }

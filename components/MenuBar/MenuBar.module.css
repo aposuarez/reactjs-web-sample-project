@@ -5,18 +5,13 @@
   position: fixed;
   top: 0;
   z-index: 1000;
- 
 }
 
 .navContent {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-}
-
-.logo {
-  margin-left: 1.5rem;
+  padding: 1rem 1.5rem;
 }
 
 .logo a {
@@ -28,19 +23,55 @@
 
 .links {
   display: flex;
+  gap: 1rem;
 }
 
 .links a {
-  display: inline-flex;           
-  align-items: center;
-  padding: 1rem 1.5rem;           
   text-decoration: none;
   color: white;
   font-weight: bold;
-  transition: background 0.2s ease, color 0.2s ease;
-  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  transition: color 0.2s ease;
 }
 
 .links a:hover {
   color: grey;
+}
+
+/* Burger Menu */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Show/hide on small screens */
+@media (max-width: 1024px) {
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    border-radius: 8px;
+    z-index: 1001;
+  }
+
+  .showMenu {
+    display: flex !important;
+  }
+
+  .burger {
+    display: flex;
+  }
 }

@@ -1,45 +1,55 @@
 .carouselContainer {
-    width: 100%;
-    margin: 0;
-    position: relative;
-  }
-  
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carouselItem {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.carouselImage,
+.carouselText {
+  flex: 1;
+}
+
+.carouselImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+.carouselText {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+/* Stack layout on small screens */
+@media (max-width: 1024px) {
   .carouselItem {
-    display: block;
-    padding:20px;
+    flex-direction: column;
+  }
+
+  .carouselImage,
+  .carouselText {
     width: 100%;
   }
-  
+
   .carouselText {
-    display: inline-block; 
-    width: 50%; 
-    text-align: left; 
-    color: white;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); 
-    height: 100%; 
-    vertical-align: middle;
+    order: 1; /* Text on top */
   }
 
   .carouselImage {
-    display: inline-block; 
-    width: 50%; 
-    max-height: 200;
-    vertical-align: middle; 
+    order: 2; /* Image below */
   }
-
+  
   .carouselImg {
-    max-height: 400px;
-    object-fit: cover;  
-    width: 100%;      
+    max-height: 250px;
   }
-  
-  .slick-dots {
-    bottom: 10px;
-  }
-  
-  .slick-prev, .slick-next {
-    background-color: rgba(0, 0, 0, 0.5); /* Optional background for arrows */
-    border-radius: 50%;
-  }
-  
+}
