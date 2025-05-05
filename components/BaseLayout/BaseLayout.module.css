@@ -1,0 +1,10 @@
+.root {
+    width: 100%; 
+    height: 100vh;
+    min-height: 100vh;
+    background-color: #042429;
+}
+
+.pageTitle {
+    padding: 100px 1rem 1rem 1rem;
+}

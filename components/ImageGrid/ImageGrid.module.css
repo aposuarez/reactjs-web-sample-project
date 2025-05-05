@@ -1,0 +1,28 @@
+
+.imageGridContainer {
+    display: flex;              
+    justify-content: center;    
+    align-items: center;        
+    flex-wrap: wrap;           
+    gap: 16px;                  
+    padding: 20px;              
+  }
+  
+  .imageItem {
+    width: 30%;                 
+    max-width: 300px;          
+    margin-bottom: 20px;        
+  }
+  
+@media (max-width: 768px) {
+    .imageGridContainer {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+}
+  
+@media (max-width: 480px) {
+    .imageGridContainer {
+      grid-template-columns: 1fr;
+    }
+}
+  

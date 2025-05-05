@@ -1,0 +1,45 @@
+.carouselContainer {
+    width: 100%;
+    margin: 0;
+    position: relative;
+  }
+  
+  .carouselItem {
+    display: block;
+    padding:20px;
+    width: 100%;
+  }
+  
+  .carouselText {
+    display: inline-block; 
+    width: 50%; 
+    text-align: left; 
+    color: white;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    height: 100%; 
+    vertical-align: middle;
+  }
+
+  .carouselImage {
+    display: inline-block; 
+    width: 50%; 
+    max-height: 200;
+    vertical-align: middle; 
+  }
+
+  .carouselImg {
+    max-height: 400px;
+    object-fit: cover;  
+    width: 100%;      
+  }
+  
+  .slick-dots {
+    bottom: 10px;
+  }
+  
+  .slick-prev, .slick-next {
+    background-color: rgba(0, 0, 0, 0.5); /* Optional background for arrows */
+    border-radius: 50%;
+  }
+  

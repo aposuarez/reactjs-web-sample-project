@@ -1,0 +1,114 @@
+[debug] [2025-05-04T16:30:58.224Z] ----------------------------------------------------------------------
+[debug] [2025-05-04T16:30:58.226Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jmsua\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2025-05-04T16:30:58.226Z] CLI Version:   14.2.2
+[debug] [2025-05-04T16:30:58.227Z] Platform:      win32
+[debug] [2025-05-04T16:30:58.227Z] Node Version:  v22.14.0
+[debug] [2025-05-04T16:30:58.227Z] Time:          Mon May 05 2025 00:30:58 GMT+0800 (Taipei Standard Time)
+[debug] [2025-05-04T16:30:58.227Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-04T16:30:58.408Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-04T16:30:58.408Z] > authorizing via signed-in user (izerouge23@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  Z:\Work\web\reactjs-web-sample-project
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-05-04T16:30:59.776Z] Using project from CLI flag: reactjs-web-sample-project
+[debug] [2025-05-04T16:30:59.777Z] Checked if tokens are valid: true, expires at: 1746379071174
+[debug] [2025-05-04T16:30:59.778Z] Checked if tokens are valid: true, expires at: 1746379071174
+[debug] [2025-05-04T16:30:59.779Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-web-sample-project [none]
+[debug] [2025-05-04T16:31:00.472Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-web-sample-project 200
+[debug] [2025-05-04T16:31:00.472Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-web-sample-project {"projectId":"reactjs-web-sample-project","projectNumber":"933322560286","displayName":"reactjs-web-sample-project","name":"projects/reactjs-web-sample-project","resources":{"hostingSite":"reactjs-web-sample-project"},"state":"ACTIVE","etag":"1_50b09a74-5d5e-4e8f-8fcd-92ea14ec461f"}
+[info] i  Using project reactjs-web-sample-project (reactjs-web-sample-project) 
+[info] 
+=== Hosting Setup
+[debug] [2025-05-04T16:31:00.476Z] Checked if tokens are valid: true, expires at: 1746379071174
+[debug] [2025-05-04T16:31:00.476Z] Checked if tokens are valid: true, expires at: 1746379071174
+[debug] [2025-05-04T16:31:00.476Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-web-sample-project [none]
+[debug] [2025-05-04T16:31:00.770Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-web-sample-project 200
+[debug] [2025-05-04T16:31:00.770Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-web-sample-project {"projectId":"reactjs-web-sample-project","projectNumber":"933322560286","displayName":"reactjs-web-sample-project","name":"projects/reactjs-web-sample-project","resources":{"hostingSite":"reactjs-web-sample-project"},"state":"ACTIVE","etag":"1_50b09a74-5d5e-4e8f-8fcd-92ea14ec461f"}
+[debug] [2025-05-04T16:31:29.516Z] Error: Command failed: npx --yes create-next-app@"12 - 15.0" -e hello-world out --use-npm --ts
+    at genericNodeError (node:internal/errors:983:15)
+    at wrappedFn (node:internal/errors:537:14)
+    at checkExecSyncError (node:child_process:882:11)
+    at execSync (node:child_process:954:15)
+    at Object.init (C:\Users\jmsua\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\next\index.js:214:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async doSetup (C:\Users\jmsua\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\hosting\index.js:120:13)
+    at async init (C:\Users\jmsua\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:41:9)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-05-04T16:31:51.230Z] ----------------------------------------------------------------------
+[debug] [2025-05-04T16:31:51.236Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jmsua\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2025-05-04T16:31:51.237Z] CLI Version:   14.2.2
+[debug] [2025-05-04T16:31:51.237Z] Platform:      win32
+[debug] [2025-05-04T16:31:51.237Z] Node Version:  v22.14.0
+[debug] [2025-05-04T16:31:51.238Z] Time:          Mon May 05 2025 00:31:51 GMT+0800 (Taipei Standard Time)
+[debug] [2025-05-04T16:31:51.238Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-05-04T16:31:51.437Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-05-04T16:31:51.437Z] > authorizing via signed-in user (izerouge23@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  Z:\Work\web\reactjs-web-sample-project
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2025-05-04T16:31:53.033Z] Using project from CLI flag: reactjs-web-sample-project
+[debug] [2025-05-04T16:31:53.037Z] Checked if tokens are valid: true, expires at: 1746379071174
+[debug] [2025-05-04T16:31:53.037Z] Checked if tokens are valid: true, expires at: 1746379071174
+[debug] [2025-05-04T16:31:53.042Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-web-sample-project [none]
+[debug] [2025-05-04T16:31:53.485Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-web-sample-project 200
+[debug] [2025-05-04T16:31:53.486Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-web-sample-project {"projectId":"reactjs-web-sample-project","projectNumber":"933322560286","displayName":"reactjs-web-sample-project","name":"projects/reactjs-web-sample-project","resources":{"hostingSite":"reactjs-web-sample-project"},"state":"ACTIVE","etag":"1_50b09a74-5d5e-4e8f-8fcd-92ea14ec461f"}
+[info] i  Using project reactjs-web-sample-project (reactjs-web-sample-project) 
+[info] 
+=== Hosting Setup
+[debug] [2025-05-04T16:31:53.492Z] Checked if tokens are valid: true, expires at: 1746379071174
+[debug] [2025-05-04T16:31:53.492Z] Checked if tokens are valid: true, expires at: 1746379071174
+[debug] [2025-05-04T16:31:53.492Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-web-sample-project [none]
+[debug] [2025-05-04T16:31:53.831Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-web-sample-project 200
+[debug] [2025-05-04T16:31:53.831Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-web-sample-project {"projectId":"reactjs-web-sample-project","projectNumber":"933322560286","displayName":"reactjs-web-sample-project","name":"projects/reactjs-web-sample-project","resources":{"hostingSite":"reactjs-web-sample-project"},"state":"ACTIVE","etag":"1_50b09a74-5d5e-4e8f-8fcd-92ea14ec461f"}
+[debug] [2025-05-04T16:32:11.503Z] Error: Command failed: npx --yes create-next-app@"12 - 15.0" -e hello-world .next --use-npm --ts
+    at genericNodeError (node:internal/errors:983:15)
+    at wrappedFn (node:internal/errors:537:14)
+    at checkExecSyncError (node:child_process:882:11)
+    at execSync (node:child_process:954:15)
+    at Object.init (C:\Users\jmsua\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\next\index.js:214:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async doSetup (C:\Users\jmsua\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\hosting\index.js:120:13)
+    at async init (C:\Users\jmsua\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:41:9)
+[error] 
+[error] Error: An unexpected error has occurred.

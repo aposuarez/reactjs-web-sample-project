@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    flex: 1;
+    background-color:  #042429;
+    padding: 50px;
+}
+
+.footerText {
+    color: white;
+}

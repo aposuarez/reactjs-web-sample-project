@@ -1,0 +1,53 @@
+.root {
+    background-image: url('/images/home-banner.avif');
+    background-size: cover; 
+    background-position: center top; 
+    aspect-ratio: '16 / 9';
+    width: 100%;
+    background-repeat: no-repeat; 
+    padding-top: 100px;
+}
+
+.welcomeContainer {
+    padding: 1.5rem
+}
+
+.welcomeTitle {
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+}
+
+.welcomeDescription {
+    font-size: 1rem;
+    color: white;
+}
+
+.body {
+    padding-top: 50px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, #000000 10%, #000000 90%);
+}
+
+.bodyAlternate {
+    padding: 50px;
+}
+
+.carouselContainer {
+    padding: 50px;
+}
+
+.gridImageContainer {
+    padding: 50px;
+    background-color: #262626;
+    /* background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, #262626 10%, #262626 90%); */
+}
+
+.gridImageContainerLabel {
+    color: white;
+    text-align: center;
+}
+
+.contactUsLabel {
+    color: white;
+    text-align: center;
+}
