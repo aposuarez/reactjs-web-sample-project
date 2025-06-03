@@ -3,16 +3,17 @@ import React, { useState,useEffect } from "react";
 import { fetchAndActivate, getValue } from "firebase/remote-config";
 import { remoteConfig } from "../api/firebase/remote-config";
 import { RemoteConfigKeys, SAMPLE_TEXT } from "../constants/strings";
+import { useTypingEffect } from "../hooks/useTypingAnimation";
 import styles from './Home.module.css'
 import Carousel from "../components/Carousel";
 import ImageGrid from "../components/ImageGrid";
-import Footer from "../components/Footer";
 import ContactForm from "../components/ContactForm";
 
 
 const HomePage = () => {
 
   const [welcomeTitle, setWelcomeTitle] = useState('')
+  const typedTitle = useTypingEffect(welcomeTitle, 100)
 
   useEffect(()=> {
     fetchAndActivate(remoteConfig)
@@ -26,7 +27,10 @@ const HomePage = () => {
     <BaseLayout>
       <div className={styles.root}>
         <div className={styles.welcomeContainer}>
-          <div className={styles.welcomeTitle}>{welcomeTitle}</div>
+          <div className={styles.welcomeTitle}>
+            {typedTitle}
+            <span className={styles.blinking}>|</span>
+          </div>
           <div className={styles.welcomeDescription}>{SAMPLE_TEXT.default}</div>
         </div>
         <div id="Services" className={styles.body}>

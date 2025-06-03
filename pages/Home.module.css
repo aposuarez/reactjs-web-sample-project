@@ -13,7 +13,8 @@
 }
 
 .welcomeTitle {
-    font-size: 2rem;
+    min-height: 4rem;
+    font-size: 3rem;
     font-weight: 500;
     color: white;
 }
@@ -22,6 +23,9 @@
     font-size: 1rem;
     color: white;
     margin-top: 1rem;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideIn 3s ease-out forwards;
 }
 
 .body {
@@ -52,3 +56,20 @@
     color: white;
     text-align: center;
 }
+
+.blinking {
+    animation: blink 1s step-start infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes slideIn {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
