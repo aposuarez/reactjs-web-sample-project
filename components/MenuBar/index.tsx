@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import styles from './MenuBar.module.css';
-import Logo from ''
 
 const MenuBar = () => {
   const [isOpen, setIsOpen] = useState(false);
