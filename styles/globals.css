@@ -11,3 +11,11 @@ html {
     scroll-behavior: smooth;
   }
 
+  :root {
+    --color-primary: #2D336B;
+    --color-secondary: #7886C7;
+    --color-accent: #A9B5DF;
+    --color-alternate: #FFF2F2;
+    --color-background: #a3a9cd;
+    --color-highlight: #ffdc00;
+  }

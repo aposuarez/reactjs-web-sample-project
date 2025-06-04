@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex: 1;
-    background-color:  #042429;
+    background-color:  var(--color-primary);
     padding: 50px;
 }
 

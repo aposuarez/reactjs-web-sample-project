@@ -11,7 +11,7 @@ type Props = {
 const BaseLayout = ({ children }: Props) => (
   <div className={styles.root}>
     <Head>
-      <title>MyWebsite</title>
+      <title>Sample Website</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
@@ -20,7 +20,9 @@ const BaseLayout = ({ children }: Props) => (
       <MenuBar />
     </header>
 
+    <div className={styles.body}>
     {children}
+    </div>
 
     <footer>
       <Footer />

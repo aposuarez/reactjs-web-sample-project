@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import styles from './MenuBar.module.css';
+import Logo from ''
 
 const MenuBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,8 +10,8 @@ const MenuBar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.navContent}>
-        <div className={styles.logo}>
-          <Link href="/">MyWebsite</Link>
+        <div >
+          <Link href="/"><img src='/images/logo-transparent.png' alt="JMSuarez Logo" className={styles.logo} /></Link>
         </div>
 
         <div className={styles.burger} onClick={() => setIsOpen(!isOpen)}>
@@ -21,9 +22,8 @@ const MenuBar = () => {
 
         <div className={`${styles.links} ${isOpen ? styles.showMenu : ''}`}>
           <Link href="/">Home</Link>
-          <Link href="#Services">Services</Link>
-          <Link href="#OurClients">Our Clients</Link>
-          <Link href="#ContactUs">Contact Us</Link>
+          <Link href="#AboutMe">About Me</Link>
+          <Link href="#Contact">Contacts</Link>
         </div>
       </div>
     </nav>

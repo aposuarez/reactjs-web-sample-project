@@ -26,8 +26,7 @@
 
 .carouselText {
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: var(--color-alternate);
 }
 
 /* Stack layout on small screens */

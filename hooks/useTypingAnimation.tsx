@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 export function useTypingEffect(text, speed = 100) {
     
   const [displayedText, setDisplayedText] = useState('')
+  const [isFinished, setIsFinished] = useState(false)
 
   useEffect(() => {
     
@@ -10,6 +11,7 @@ export function useTypingEffect(text, speed = 100) {
 
     let i = 0
     setDisplayedText('')
+    setIsFinished(false)
 
     const interval = setInterval(() => {
         i++;
@@ -17,11 +19,12 @@ export function useTypingEffect(text, speed = 100) {
   
         if (i >= text.length) {
           clearInterval(interval);
+          setIsFinished(true)
         }
       }, speed);
 
     return () => clearInterval(interval)
   }, [text, speed])
 
-  return displayedText
+  return {displayedText, isFinished}
 }
