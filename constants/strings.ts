@@ -7,11 +7,12 @@ export const REMOTE_CONFIG_DEFAULT_VALUES = {
     welcomeTitle: 'Welcome to my website.',
     homeContent: {
         "welcomeTitle": "Welcome to my sample website.",
-        "welcomeDescription": "This sample website is built with React and powered by Next.js with Redux for state management. Website contents are pulled and managed from Firebase Remote Config so that updates can published without doing any code changes and deployment.",
+        "welcomeDescription": "This sample website is built with React and powered by Next.js with Redux for state management. Website contents are pulled and managed from Firebase Remote Config so that updates can be published without doing any code changes or deployment.",
         "aboutMeTitle": "The name is John. John Michael Suarez...",
         "aboutMeSubtitle": "but you can just call me JM 😎",
-        "aboutMeDescription": "I'm a frontend web and hybrid mobile application developer with expertise in ReactJS, Next.js, Redux, and modern frontend workflows. I have built and deployed responsive, user-friendly interfaces for various platforms, including this personal portfolio site hosted on Vercel, an admin dashboard for the BRAD App, and enterprise-level solutions like wecare.ph and CNX Helios. I am experienced in using cloud services like Firebase and AWS, and have worked in Agile teams using Git, Jira, and CI/CD practices. My work emphasizes clean, maintainable code and intuitive user experiences, showcasing a strong focus on frontend performance and usability."
-      }
+        "aboutMeDescription": "I'm a frontend web and hybrid mobile application developer with expertise in ReactJS, Next.js, Redux, and modern frontend workflows. I have built and deployed responsive, user-friendly interfaces for various platforms, including this personal portfolio site hosted on Vercel, an admin dashboard for the BRAD App, and enterprise-level solutions like wecare.ph and CNX Helios. I am experienced in using cloud services like Firebase and AWS, and have worked in Agile teams using Git, Jira, and CI/CD practices. My work emphasizes clean, maintainable code and intuitive user experiences, showcasing a strong focus on frontend performance and usability.",
+        "skillsList": ["ReactJS", "React Native", "Next.js", "Typescript", "Redux", "Hooks"]
+    }
 }
 
 export const SAMPLE_TEXT = {

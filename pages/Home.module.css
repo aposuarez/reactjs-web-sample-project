@@ -4,6 +4,12 @@
 }
 
 .welcomeContainer {
+    
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Top text, bottom image */
+    align-items: center;
     padding: 10rem 5rem 3rem 5rem;
 }
 
@@ -27,10 +33,14 @@
     animation: slideIn 2s ease-out forwards;
 }
 
+.welcomeTextContainer {
+    display: block;
+}
+
 .welcomeImage {
-    display: block;       
-    margin: 3rem 0 0 auto;     
-    width: 100%;     
+    display: block;          
+    width: 100%;
+    margin: 3rem auto 0 auto;
 }
 
 .body {
@@ -44,10 +54,11 @@
     max-height: 400px;
     border-radius: 50%;         
     border: 20px solid var(--color-secondary); 
+    margin: 0 50px 0 50px; 
 }
 
 .aboutMeContent {
-    padding: 20px;
+    
     flex: 1
 }
 
@@ -76,15 +87,70 @@
     animation: slideIn 1s ease-out forwards;
 }
 
-.gridImageContainer {
+.skillsContainer {
     padding: 50px;
-    background-color: var(--color-alternate);
-    /* background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, #262626 10%, #262626 90%); */
+    background-color: var(--color-secondary);
+    
 }
 
-.gridImageContainerLabel {
-    color: var(--color-accent);
-    text-align: center;
+.skillsLabel {
+    color: white;
+    text-align: left;
+    font-weight: 300;
+}
+
+.skillsGridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.skillsItem {
+    background-color: whitesmoke;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;           
+    border-bottom: 5px solid var(--color-highlight);   
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    display: inline-flex;           
+    justify-content: center;       
+    align-items: center;          
+    text-align: center;       
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.skillsImage {
+    display: block;          
+    width: 100%;
+    max-width: 1500px;
+    margin: 3rem auto 0 auto;
+}
+
+.contactMeContainer {
+    padding: 50px;
+    background-color: var(--color-primary);
+    
+}
+
+.contactMeLabel {
+    color: white;
+    text-align: left;
+    font-weight: 300;
+}
+
+.contactMeText {
+    display: block;
+    width: 100%;
+    color: white;
+    margin-top: 5px;
+}
+
+
+.contactMeLink {
+    color: white;
+    margin-top: 5px;
 }
 
 .contactUsLabel {
@@ -113,6 +179,7 @@
   
     .aboutMeContent {
       width: 100%;
+      margin-top: 50px;
     }
   
     .aboutMeImage {

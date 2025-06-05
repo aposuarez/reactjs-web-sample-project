@@ -1,21 +1,17 @@
 import BaseLayout from "../components/BaseLayout";
 import React, { useState,useEffect } from "react";
-import { fetchAndActivate, getValue } from "firebase/remote-config";
-import { remoteConfig } from "../api/firebase/remote-config";
-import { RemoteConfigKeys, SAMPLE_TEXT } from "../constants/strings";
 import { useTypingEffect } from "../hooks/useTypingAnimation";
 import styles from './Home.module.css'
-import Carousel from "../components/Carousel";
-import ImageGrid from "../components/ImageGrid";
-import ContactForm from "../components/ContactForm";
 import { getHomeScreenContent } from "../api/firebase/remote-config/RemoteConfigService";
+import Link from "next/link";
 
 type HomeScreenContent = {
   welcomeTitle: string,
   welcomeDescription: string,
   aboutMeTitle: string,
   aboutMeSubtitle: string,
-  aboutMeDescription: string
+  aboutMeDescription: string,
+  skillsList: string[]
 }
 
 const HomeScreen = () => {
@@ -55,9 +51,11 @@ const HomeScreen = () => {
       <div className={styles.root}>
 
         <div className={styles.welcomeContainer}>
-          <div className={styles.welcomeTitle}>{content?.welcomeTitle}</div>
-          <div className={styles.welcomeDescription}>{content?.welcomeDescription}</div>
-          <img src='/images/masthead.jpg' alt="JM Suarez Self" className={styles.welcomeImage} />
+          <div className={styles.welcomeTextContainer}>
+            <div className={styles.welcomeTitle}>{content?.welcomeTitle}</div>
+            <div className={styles.welcomeDescription}>{content?.welcomeDescription}</div>
+          </div>
+          <img src='/images/masthead.jpg' alt="Masthead" className={styles.welcomeImage} />
         </div>
 
         <div id="AboutMe" className={styles.body}>
@@ -76,6 +74,27 @@ const HomeScreen = () => {
             <div className={`${styles.aboutMeDescription} ${typedNickname.isFinished ? styles.show : ''}`}>{content?.aboutMeDescription}</div>
           </div>
         </div>
+
+        <div id="Skills" className={styles.skillsContainer}>
+          <h1 className={styles.skillsLabel}>Relevant Skills</h1>
+          <div className={styles.skillsGridContainer}>
+            {
+              content?.skillsList.map((item, index) => (
+                <div className={styles.skillsItem}>{item}</div>
+              ))
+            }
+          </div>
+          <img src='/images/skills.png' alt="JM Suarez Self" className={styles.skillsImage} />
+        </div>
+
+        <div id="ContactMe" className={styles.contactMeContainer}>
+          <h1 className={styles.contactMeLabel}>Contact Me</h1>
+            <div className={styles.contactMeText}>Address: NCR, Philippines</div>
+            <div className={styles.contactMeText}>Email: jmsuarez23@yahoo.com</div>
+            <div className={styles.contactMeText}>Mobile No.: +639214980478</div>
+            <div className={styles.contactMeText}>LinkedIn: <a className={styles.contactMeLink} href="https://www.linkedin.com/in/john-michael-suarez-280bb6166/" target="_blank">https://www.linkedin.com/in/john-michael-suarez-280bb6166/</a></div>
+        </div>
+
 
       </div>
     </BaseLayout>

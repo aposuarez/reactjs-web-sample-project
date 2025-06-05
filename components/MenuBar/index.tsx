@@ -21,8 +21,9 @@ const MenuBar = () => {
 
         <div className={`${styles.links} ${isOpen ? styles.showMenu : ''}`}>
           <Link href="/">Home</Link>
-          <Link href="#AboutMe">About Me</Link>
-          <Link href="#Contact">Contacts</Link>
+          <Link href="#AboutMe">About</Link>
+          <Link href="#Skills">Skills</Link>
+          <Link href="#ContactMe">Contact Me</Link>
         </div>
       </div>
     </nav>
