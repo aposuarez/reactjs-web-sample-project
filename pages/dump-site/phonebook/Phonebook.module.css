@@ -1,0 +1,98 @@
+.root {
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    text-align: center; 
+    padding: 3rem;
+}
+
+.phonebookDescriptionContainer {
+    flex: 1
+}
+
+.phonebookDescriptionTitle {
+    color: var(--color-primary);
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+.contactListContainer {
+    display: block;
+    flex: 2;
+}
+
+.contactListBody {
+    margin-top: 10px;
+    height: 70vh;
+    background-color: var(--color-alternate);
+    border: 3px dashed var(--color-secondary);
+    border-radius: 15px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.contactListItem {
+    display: flex;
+    padding: 0px 5px 0px 5px;
+}
+
+.contactListNameTitle, .contactListPhoneNumberTitle {
+    flex: 1;
+    display: flex;
+    text-align: left;
+    padding:5px;
+    border-bottom: 3px solid grey;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.contactListNameTitle {
+    border-right: 3px solid grey;
+}
+
+.contactListName, .contactListPhoneNumber {
+    flex: 1;
+    display: flex;
+    text-align: left;
+    padding:5px;
+    border-bottom: 1px solid grey;
+    
+}
+
+.contactListName {
+    border-right: 3px dashed lightgrey;
+}
+
+.contactListPhoneNumber {
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+.contactListIconGroup {
+  display: flex;
+  gap: 5px;
+}
+
+.contactListIcon {
+  cursor: pointer;
+  height: 20px
+}
+
+.addContactButtonContainer {
+    text-align: left;
+}
+
+.addContactButton {
+    padding: 12px 20px; 
+    font-size: 16px; 
+    font-weight: bold;
+    color: white; 
+    background-color: #005bb5; 
+    border: none; 
+    border-radius: 8px;
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+}

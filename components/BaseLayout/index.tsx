@@ -5,13 +5,15 @@ import Footer from "../Footer";
 import styles from './BaseLayout.module.css'
 
 type Props = {
+  title: string,
+  isFooterVisible: boolean;
   children?: ReactNode;
 };
 
-const BaseLayout = ({ children }: Props) => (
+const BaseLayout = ({ title, isFooterVisible, children  }: Props) => (
   <div className={styles.root}>
     <Head>
-      <title>Sample Website</title>
+      <title>jmsuarez | {title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
@@ -24,9 +26,15 @@ const BaseLayout = ({ children }: Props) => (
     {children}
     </div>
 
-    <footer>
-      <Footer />
-    </footer>
+    {
+      isFooterVisible 
+      ?
+      <footer>
+        <Footer />
+      </footer>
+      :
+      <></>
+    }
   </div>
 )
 

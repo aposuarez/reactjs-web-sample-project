@@ -1,20 +1,52 @@
 export enum RemoteConfigKeys {
     welcomeTitle = 'welcome_title',
-    homeContent = 'home_content'
+    homeContent = 'home_content',
+    dumpSiteContent = 'dump_site_content',
+    maintenanceContent = 'maintenance_content'
 }
 
 export const REMOTE_CONFIG_DEFAULT_VALUES = {
     welcomeTitle: 'Welcome to my website.',
     homeContent: {
-        "welcomeTitle": "Welcome to my sample website.",
-        "welcomeDescription": "This sample website is built with React and powered by Next.js with Redux for state management. Website contents are pulled and managed from Firebase Remote Config so that updates can be published without doing any code changes or deployment.",
+        "welcomeTitle": "Welcome to my page.",
+        "welcomeDescription": "This sample website is built with React and powered by Next.js. The content is managed through Firebase Remote Config, which means I can update things on the fly — no code changes or deployments needed.\nIt's simple, but I hope you’ll take a moment to explore it and maybe even take a peek at my playground while you're at it.",
         "aboutMeTitle": "The name is John. John Michael Suarez...",
         "aboutMeSubtitle": "but you can just call me JM 😎",
-        "aboutMeDescription": "I'm a frontend web and hybrid mobile application developer with expertise in ReactJS, Next.js, Redux, and modern frontend workflows. I have built and deployed responsive, user-friendly interfaces for various platforms, including this personal portfolio site hosted on Vercel, an admin dashboard for the BRAD App, and enterprise-level solutions like wecare.ph and CNX Helios. I am experienced in using cloud services like Firebase and AWS, and have worked in Agile teams using Git, Jira, and CI/CD practices. My work emphasizes clean, maintainable code and intuitive user experiences, showcasing a strong focus on frontend performance and usability.",
-        "skillsList": ["ReactJS", "React Native", "Next.js", "Typescript", "Redux", "Hooks"]
+        "aboutMeDescription": "I'm a mobile application developer with a passion for web development — a curiosity that led me to create this page.\nI have hands-on experience with ReactJS, Next.js, Redux, and modern frontend workflows that I got from building and deploying responsive and user-friendly interfaces for several internal enterprise platforms.\nI'm also familiar with cloud services like Firebase and AWS, and have worked in Agile teams using tools like Git, Jira, and CI/CD pipelines.\nMy work emphasizes clean, maintainable code and intuitive user experiences, with a strong focus on frontend performance and usability.",
+        "skillsList": ["ReactJS", "React Native", "Next.js", "Typescript", "Redux", "Context API", "Hooks", "Supabase", "Firebase", "Vercel"],
+        "skillsDescription": "But words can only go so far right? I’m sure you want something a bit more concrete. Coincidentally, this sample website also happens to be my dumpsite... uh, I mean sandbox. It’s not perfect, but if you don’t mind a bit of a mess, feel free to take a look!"
+    },
+    dumpSiteContent: {
+        "sandboxTitle": "Sandbox",
+        "sandboxDescription": "A space where I tinker with code, test new technologies, and turn random sparks of curiosity into working (and sometimes broken) prototypes.",
+        "sandboxProjects": [
+            {
+            "title": "Phonebook", 
+            "description": "A basic phonebook application to showcase CRUD operations with Supabase.", 
+            "navigationTarget": "phonebook"
+            },
+            {
+            "title": "Authentication", 
+            "description": "Demonstrates a common login and registration flow using Firebase Authentication.", 
+            "navigationTarget": "authentication"
+            },
+            {
+            "title": "Components", 
+            "description": "This is just a collection of random custom components.", 
+            "navigationTarget": "components"
+            }]
+    },
+    maintenanceContent: {
+        "maintenanceTitle": "🚧 Under Construction",
+        "maintenanceDescription": "Sorry, this part is not ready yet. Please come back next time."
     }
 }
 
 export const SAMPLE_TEXT = {
     default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum'
+}
+
+export enum TableKey {
+    ALL = '*',
+    ID = 'id'
 }

@@ -3,7 +3,9 @@ import React, { useState,useEffect } from "react";
 import { useTypingEffect } from "../hooks/useTypingAnimation";
 import styles from './Home.module.css'
 import { getHomeScreenContent } from "../api/firebase/remote-config/RemoteConfigService";
-import Link from "next/link";
+import { useLineBreak } from "../hooks/useLineBreak";
+import { useRouter } from "next/router";
+import { NextPage } from "next";
 
 type HomeScreenContent = {
   welcomeTitle: string,
@@ -11,15 +13,20 @@ type HomeScreenContent = {
   aboutMeTitle: string,
   aboutMeSubtitle: string,
   aboutMeDescription: string,
-  skillsList: string[]
+  skillsList: string[],
+  skillsDescription: string,
+  skillsNavigationTarget: string
 }
 
-const HomeScreen = () => {
+const HomeScreen: NextPage = () => {
 
   const [content, setContent] = useState<HomeScreenContent>(null)
   const [shouldTypeNickname, setShouldTypeNickname] = useState(false)
+  const router = useRouter()
   const typedName = useTypingEffect(content?.aboutMeTitle, 150)
   const typedNickname = useTypingEffect(shouldTypeNickname ? content?.aboutMeSubtitle : '', 50)
+  const lineBreakedWelcomeDescription = useLineBreak(content?.welcomeDescription)
+  const lineBreakedAboutMeDescription = useLineBreak(content?.aboutMeDescription)
 
   useEffect(()=> {
     setHomeScreenContent()
@@ -46,20 +53,24 @@ const HomeScreen = () => {
     })
   }
 
+  const navigateToDumpSite = () => {
+    router.push(content?.skillsNavigationTarget)
+  }
+
   return (
-    <BaseLayout>
+    <BaseLayout title="Web Portfolio" isFooterVisible={true}>
       <div className={styles.root}>
 
         <div className={styles.welcomeContainer}>
           <div className={styles.welcomeTextContainer}>
             <div className={styles.welcomeTitle}>{content?.welcomeTitle}</div>
-            <div className={styles.welcomeDescription}>{content?.welcomeDescription}</div>
+            <div className={styles.welcomeDescription}>{lineBreakedWelcomeDescription}</div>
           </div>
-          <img src='/images/masthead.jpg' alt="Masthead" className={styles.welcomeImage} />
+          <img src='/images/masthead.jpg' alt="welcome-masthead" className={styles.welcomeImage} />
         </div>
 
         <div id="AboutMe" className={styles.body}>
-        <img src='/images/self-ghibli.jpg' alt="JM Suarez Self" className={styles.aboutMeImage} />
+        <img src='/images/self-ghibli.jpg' alt="auther-self-cartoon" className={styles.aboutMeImage} />
           <div className={styles.aboutMeContent}>
             <div>
               <div className={styles.aboutMeTitle}>
@@ -71,7 +82,7 @@ const HomeScreen = () => {
                 <span className={typedName?.isFinished && !typedNickname.isFinished ? styles.blinking : styles.gone}>|</span>
               </div>
             </div>
-            <div className={`${styles.aboutMeDescription} ${typedNickname.isFinished ? styles.show : ''}`}>{content?.aboutMeDescription}</div>
+            <div className={`${styles.aboutMeDescription} ${typedNickname.isFinished ? styles.show : ''}`}>{lineBreakedAboutMeDescription}</div>
           </div>
         </div>
 
@@ -84,7 +95,11 @@ const HomeScreen = () => {
               ))
             }
           </div>
-          <img src='/images/skills.png' alt="JM Suarez Self" className={styles.skillsImage} />
+          <div className={styles.skillsDescriptionContainer}>
+            <div className={styles.skillsDescription}>{content?.skillsDescription}</div>
+            <div className={styles.skillsButton} onClick={navigateToDumpSite}>Explore Sandbox</div>
+          </div>
+          
         </div>
 
         <div id="ContactMe" className={styles.contactMeContainer}>

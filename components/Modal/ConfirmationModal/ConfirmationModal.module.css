@@ -1,0 +1,70 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.confirmationTitle {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.confirmationMessage {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--color-secondary);
+}
+
+.closeButton {
+    color: var(--color-primary);
+    font-weight: 800;
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.cancelButton {
+    margin-top: 2rem;
+    margin-right: 1rem;
+    padding: 10px 20px; 
+    font-size: 1rem; 
+    color: white; 
+    background-color: var(--color-primary); 
+    border: none; 
+    border-radius: 8px;
+    cursor: pointer; 
+  }
+
+.confirmButton {
+    margin-top: 2rem; 
+    padding: 10px 20px; 
+    font-size: 1rem; 
+    color: var(--color-primary); 
+    background-color: transparent; 
+    border: 2px solid var(--color-primary); ; 
+    border-radius: 8px;
+    cursor: pointer; 
+  }

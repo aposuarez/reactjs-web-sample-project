@@ -1,0 +1,97 @@
+.root {
+    display: block;
+}
+
+.sandboxWelcomeContainer {
+    padding: 6rem 2rem 2rem 2rem;
+}
+
+.sandboxTitle {
+    min-height: 5rem;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-highlight);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideIn 2s ease-out forwards;
+}
+
+.sandboxDescription {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--color-primary);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideIn 2s ease-out forwards;
+}
+
+.sandboxProjectTable {
+  display: flex;
+  margin-top: 3rem;
+}
+
+.sandboxProjectColumnOne,
+.sandboxProjectColumnTwo,
+.sandboxProjectColumnThree {
+  flex: 1; 
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease; 
+  cursor: pointer;
+}
+
+.sandboxProjectColumnOne {
+  background-color: var(--color-accent);
+}
+
+.sandboxProjectColumnTwo {
+  background-color: var(--color-secondary);
+}
+
+.sandboxProjectColumnThree {
+  background-color: var(--color-primary);
+}
+
+.sandboxProjectColumnOne:hover,
+.sandboxProjectColumnTwo:hover,
+.sandboxProjectColumnThree:hover {
+  transform: scale(1.1); 
+  z-index: 1; 
+}
+
+.sandboxProjectTitle {
+    color: white;
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+.sandboxProjectDescription {
+    margin-top: 1rem;
+    color: white;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+
+
+@media (max-width: 1024px) {
+    .sandboxProjectTable {
+      display: block;
+    }
+    
+}
+
+@keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+@keyframes slideIn {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

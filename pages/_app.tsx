@@ -2,6 +2,8 @@ import { Work_Sans } from 'next/font/google'
 import '../styles/globals.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { Provider } from 'react-redux';
+import { store } from '../redux/store';
 
 const workSans = Work_Sans({
     subsets: ['latin'],
@@ -11,7 +13,9 @@ const workSans = Work_Sans({
 function MyApp({ Component, pageProps }) {
   return (
     <main className={workSans.className}>
-        <Component {...pageProps} />
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
     </main>
   );
 }

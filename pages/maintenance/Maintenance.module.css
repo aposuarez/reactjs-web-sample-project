@@ -1,0 +1,25 @@
+.root {
+    height: 100vh;
+    background-image: url('/images/maintenance.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    text-align: center; 
+}
+
+.maintenanceContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;   
+}
+
+.maintenanceTitle {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.maintenanceDescription {
+    font-size: 2rem;
+}
