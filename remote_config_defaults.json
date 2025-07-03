@@ -14,20 +14,21 @@
         "sandboxDescription": "A space where I tinker with code, test new technologies, and turn random sparks of curiosity into working (and sometimes broken) prototypes.",
         "sandboxProjects": [
             {
-            "title": "Phonebook", 
-            "description": "A basic phonebook application to showcase CRUD operations with Supabase.", 
-            "navigationTarget": "phonebook"
+              "title": "Phonebook",
+              "description": "A basic phonebook application to showcase CRUD operations with Supabase.",
+              "navigationTarget": "phonebook"
             },
             {
-            "title": "Authentication", 
-            "description": "Demonstrates a common login and registration flow using Firebase Authentication.", 
-            "navigationTarget": "authentication"
+              "title": "Tic Tac Toe",
+              "description": "Just a simple tic tac toe game.",
+              "navigationTarget": "tictactoe"
             },
             {
-            "title": "Components", 
-            "description": "This is just a collection of random custom components.", 
-            "navigationTarget": "components"
-            }]
+              "title": "Authentication",
+              "description": "Demonstrates a common login and registration flow using Firebase Authentication.",
+              "navigationTarget": "authentication"
+            }
+        ]
   },
   "maintenance_content": {
         "maintenanceTitle": "🚧 Under Construction",

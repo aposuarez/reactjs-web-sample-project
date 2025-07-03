@@ -22,6 +22,10 @@ const DumpSiteScreen: NextPage =()=> {
         setDumpSiteScreenContent()
     },[])
 
+    useEffect(()=> {
+        console.log("content ->", content)
+    },[content])
+
     const setDumpSiteScreenContent =async()=> {
         await getDumpSiteScreenContent().then((remoteContent) => {
           setContent(JSON.parse(remoteContent))
@@ -29,7 +33,7 @@ const DumpSiteScreen: NextPage =()=> {
     }
 
     const navigateToProject =(route: string)=> {
-        router.push('dump-site/phonebook')
+        router.push(`${router.asPath}/${route}`)
     }
 
     const navigateToMaintenance =()=> {
@@ -50,7 +54,7 @@ const DumpSiteScreen: NextPage =()=> {
                             <div className={styles.sandboxProjectTitle}>{content?.sandboxProjects[0].title}</div>
                             <div className={styles.sandboxProjectDescription}>{content?.sandboxProjects[0].description}</div>
                         </div>
-                        <div className={styles.sandboxProjectColumnTwo} onClick={navigateToMaintenance}>
+                        <div className={styles.sandboxProjectColumnTwo} onClick={()=>navigateToProject(content?.sandboxProjects[1].navigationTarget)}>
                             <div className={styles.sandboxProjectTitle}>{content?.sandboxProjects[1].title}</div>
                             <div className={styles.sandboxProjectDescription}>{content?.sandboxProjects[1].description}</div>
                         </div>
