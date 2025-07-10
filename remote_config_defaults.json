@@ -24,9 +24,9 @@
               "navigationTarget": "tictactoe"
             },
             {
-              "title": "Authentication",
-              "description": "Demonstrates a common login and registration flow using Firebase Authentication.",
-              "navigationTarget": "authentication"
+              "title": "Hero Section",
+              "description": "A sample hero page made with Next.js and Tailwind",
+              "navigationTarget": "https://nextjs-tailwind-sample-alpha.vercel.app/"
             }
         ]
   },

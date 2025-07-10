@@ -21,22 +21,22 @@ export const REMOTE_CONFIG_DEFAULT_VALUES = {
         "sandboxDescription": "A space where I tinker with code, test new technologies, and turn random sparks of curiosity into working (and sometimes broken) prototypes.",
         "sandboxProjects": [
             {
-                "title": "Phonebook",
-                "description": "A basic phonebook application to showcase CRUD operations with Supabase.",
-                "navigationTarget": "phonebook"
+              "title": "Phonebook",
+              "description": "A basic phonebook application to showcase CRUD operations with Supabase.",
+              "navigationTarget": "phonebook"
             },
             {
-                "title": "Tic Tac Toe",
-                "description": "Just a simple tic tac toe game.",
-                "navigationTarget": "tictactoe"
+              "title": "Tic Tac Toe",
+              "description": "Just a simple tic tac toe game.",
+              "navigationTarget": "tictactoe"
             },
             {
-                "title": "Authentication",
-                "description": "Demonstrates a common login and registration flow using Firebase Authentication.",
-                "navigationTarget": "authentication"
+              "title": "Hero Section",
+              "description": "A sample hero page made with Next.js and Tailwind",
+              "navigationTarget": "https://nextjs-tailwind-sample-alpha.vercel.app/"
             }
         ]
-    },
+  },
     maintenanceContent: {
         "maintenanceTitle": "🚧 Under Construction",
         "maintenanceDescription": "Sorry, this part is not ready yet. Please come back next time."
